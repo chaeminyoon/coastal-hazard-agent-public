@@ -3,6 +3,9 @@ on:
   workflow_dispatch:
 permissions:
   contents: read
+defaults:
+  run:
+    shell: bash
 jobs:
   backend:
     if: github.event.repository.private == false
@@ -15,15 +18,27 @@ jobs:
         with:
           python-version: '3.12'
           cache: pip
+      - uses: actions/setup-node@v7.1.0
+        with:
+          node-version: '24.14.0'
+          cache: npm
+          cache-dependency-path: frontend/package-lock.json
+      - name: Build frontend assets for API tests
+        working-directory: frontend
+        run: |
+          npm ci --ignore-scripts
+          npm run build
       - name: Install backend test dependencies
         run: python -m pip install pytest -r requirements.txt
       - name: Run backend tests
         env:
           PYTEST_DISABLE_PLUGIN_AUTOLOAD: '1'
         run: |
-          python -m pytest -q tests 2>&1 | tee backend-test-results.txt
+          status=0
+          python -m pytest -q tests 2>&1 | tee backend-test-results.txt || status=$?
           echo '## Backend test result' >> "$GITHUB_STEP_SUMMARY"
           tail -n 2 backend-test-results.txt >> "$GITHUB_STEP_SUMMARY"
+          exit "$status"
   frontend:
     if: github.event.repository.private == false
     runs-on: ubuntu-latest
@@ -44,9 +59,11 @@ jobs:
         env:
           TZ: America/Regina
         run: |
-          npm test 2>&1 | tee frontend-test-results.txt
+          status=0
+          npm test 2>&1 | tee frontend-test-results.txt || status=$?
           echo '## Frontend test result' >> "$GITHUB_STEP_SUMMARY"
           tail -n 8 frontend-test-results.txt >> "$GITHUB_STEP_SUMMARY"
+          exit "$status"
       - name: Build frontend
         working-directory: frontend
         run: npm run build
