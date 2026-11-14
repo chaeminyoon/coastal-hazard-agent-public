@@ -58,7 +58,7 @@ A frontend build is not evidence that the dataset-backed service can run without
 
 ### Backend checks
 
-Install the declared requirements in an isolated Python environment, then run **python -m pytest -q tests** from the repository root. PostgreSQL integration tests require an explicitly supplied test database. The external-engine-specific HWPX test is skipped when its optional engine module is unavailable; this is not an end-to-end engine validation.
+Build the frontend assets first (as above), because the API root test serves `frontend/dist`. Install the declared requirements in an isolated Python environment, then run **python -m pytest -q tests** from the repository root. PostgreSQL integration tests require an explicitly supplied test database. The full backend suite is not self-contained: report-verification and spatial-join tests require the separately provisioned `coastal_agent` package and currently fail without it. The external-engine-specific HWPX test is skipped when its optional engine module is unavailable. Neither failures nor dependency-related skips are evidence that the external integration passed.
 
 See [validation details](docs/VALIDATION.md), [feature boundaries](docs/FEATURES.md) and [security guidance](SECURITY.md). Historical operational timings and test counts from the private system are intentionally not reused as current results.
 
