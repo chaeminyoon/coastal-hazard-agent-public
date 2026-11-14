@@ -4,6 +4,10 @@
 
 I co-developed the system with an AI-team colleague, connecting map-based selection, scoped SQL, analysis, visualization, numerical checks and report preparation. The source assessment dataset was prepared separately; this work does not claim ownership of that dataset.
 
+![Illustrative workflow, no production data](frontend/src/assets/guide-01-workspace.svg)
+
+*English workflow schematic, not a production capture. No assessment data is shown.*
+
 ## Why this exists
 
 GIS selection, analysis tables, charts and report writing often live in separate tools. This application connects them while keeping executed queries and supporting results available for review.
