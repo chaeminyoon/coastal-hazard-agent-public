@@ -1,16 +1,43 @@
 # Coastal Hazard Intelligence Agent
 
-**Sanitized portfolio source for a geospatial analysis and evidence-linked reporting web application.**
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/assets/portfolio/geosr-logo-white.png">
+  <img src="docs/assets/portfolio/geosr-logo.png" alt="GeoSR, original project context" width="200">
+</picture>
+
+**Portfolio source and English-annotated original captures for a geospatial analysis and evidence-linked reporting application.**
 
 I co-developed the system with an AI-team colleague, connecting map-based selection, scoped SQL, analysis, visualization, numerical checks and report preparation. The source assessment dataset was prepared separately; this work does not claim ownership of that dataset.
 
-![Illustrative workflow, no production data](frontend/src/assets/guide-01-workspace.svg)
+![English-annotated original application workspace](docs/assets/portfolio/workspace.png)
 
-*English workflow schematic, not a production capture. No assessment data is shown.*
+*English-annotated original GeoSR captures retain the original layout, branding and workflow, with account details protected. Major labels and explanations are translated for portfolio readability. These are not native-English runtime screenshots or evidence of an English-localized product; the application and source interface remain Korean. An edited internal review is included; raw assessment data is not.*
 
 ## Why this exists
 
 GIS selection, analysis tables, charts and report writing often live in separate tools. This application connects them while keeping executed queries and supporting results available for review.
+
+## Selected original project evidence
+
+### Executed SQL stays beside the result
+
+![English-annotated executed SQL and result evidence, assessment values protected](docs/assets/portfolio/sql-evidence.png)
+
+Review the executed query and result-table structure in the same workflow. English SQL field labels and readable excerpts are reading annotations, not newly executed queries or a migrated schema. Result figures and row contents are covered, not replaced with invented sample values or altered numerical results.
+
+### Report sentences link back to their evidence
+
+![English-annotated original sentence-to-evidence interface, data protected](docs/assets/portfolio/sentence-evidence.png)
+
+The original interface connects report prose, statistical keys, source-field names and map context. Detailed report values, map/grid content and attribute records are protected in this portfolio image.
+
+### Report generation is a staged background workflow
+
+![English-annotated original report demo sequence, assessment output protected](docs/assets/portfolio/report-pipeline.gif)
+
+All three frames of the original demo sequence are English-annotated and data-protected, showing the reporting interface and stage transitions. **Playback speed is not execution latency**, and the historical verification status is not a new accuracy benchmark.
+
+Explore [all English-annotated original captures and data-protection notes](docs/assets/portfolio/README.md), including selected-area analysis. Read the [edited internal engineering review](docs/ENGINEERING_REVIEW.md) for the rationale behind scope enforcement, cancellation/state integrity, queueing and chart semantics. The review distinguishes dated recommendations from mechanisms supported by the current source.
 
 ## Engineering decisions
 
@@ -27,9 +54,11 @@ These are implementation/design features, not guarantees of universal factual ac
 - Python/FastAPI web and service-integration code
 - React/TypeScript UI, including a Korean-language application interface
 - Deployment examples, schema migrations and automated tests
-- English workflow schematics labelled **Illustrative workflow, no production data**
+- Four English-annotated original application screenshots and a three-frame demo, with sensitive/data-specific areas covered
+- Two original GeoSR logo assets and an edited historical internal engineering review
+- Separately labelled illustrative workflow schematics in the application guide
 
-It excludes original assessment files, customer documents, real report exports, production screenshots/GIFs, employer logos, internal service-review notes and the original private Git history. The schematics are not captures of a deployed system and are not benchmark evidence.
+Original media and internal documentation are **not excluded as a category**: the important portfolio materials are included after data-focused review. Raw assessment files, customer documents, unredacted result rows/maps, full generated report PDFs, deployment secrets and the original private Git history remain excluded. Captions distinguish English-annotated original captures from illustrative diagrams. Neither is a new benchmark or proof of current full-service reproducibility.
 
 ## Important dependency boundary
 
@@ -64,4 +93,4 @@ See [validation details](docs/VALIDATION.md), [feature boundaries](docs/FEATURES
 
 ## Data, attribution and licensing
 
-This source is shared for portfolio review with release permission. Public visibility is not a general open-source license grant. Third-party dependencies and map services retain their own licenses and terms; see [third-party notes](THIRD_PARTY_NOTICES.md). No original imagery or assessment data is redistributed.
+This source is shared for portfolio review with release permission. Public visibility is not a general open-source license grant. Third-party dependencies and map services retain their own licenses and terms; see [third-party notes](THIRD_PARTY_NOTICES.md). Selected original logos and protected application captures are included with release permission. The underlying assessment data is not redistributed. Branding identifies the historical project context, not a new endorsement.
