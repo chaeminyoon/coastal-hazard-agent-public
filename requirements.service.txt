@@ -1,0 +1,35 @@
+# Agent runtime
+langgraph>=0.2.0
+langchain-anthropic>=0.3.0
+langchain-openai>=0.3.0
+openai>=1.109.1,<3.0.0
+anthropic>=0.40.0
+python-dotenv>=1.0.0
+jinja2>=3.1.0
+tqdm>=4.67.0
+
+# Data and spatial analysis
+pandas>=2.2.0
+pyarrow>=16.0.0
+python-calamine>=0.2.0
+openpyxl>=3.1.0
+duckdb>=1.0.0
+geopandas>=1.0.0
+pyogrio>=0.9.0
+matplotlib>=3.9.0
+contextily>=1.6.0
+
+# Web service and persistence
+fastapi>=0.115.0,<1.0.0
+uvicorn[standard]>=0.34.0,<1.0.0
+httpx2>=2.5.0,<3.0.0
+python-multipart>=0.0.20,<1.0.0
+SQLAlchemy>=2.0,<3.0
+alembic>=1.16,<2.0
+psycopg[binary]>=3.2,<4.0
+pwdlib[argon2]>=0.3,<1.0
+redis>=5.2,<7.0
+rq>=2.1,<3.0
+
+# MCP visualization runtime (pinned for reproducible service builds)
+data-analysis-mcp @ https://github.com/chaeminyoon/Data-Analyze-MCP/archive/546746f0197de7d2e4655c1805a80e354e0e4815.zip

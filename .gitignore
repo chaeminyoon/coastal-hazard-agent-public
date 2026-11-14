@@ -1,0 +1,18 @@
+.venv/
+.venv-mcp/
+vendor/Data-Analyze-MCP/
+frontend/node_modules/
+frontend/dist/
+outputs/
+backups/
+backups-smoke/
+.env
+.env.service
+!.env.service.example
+*.log
+__pycache__/
+.pytest_cache/
+*.tsbuildinfo
+
+# 발표자료 — 용량이 커 저장소 밖에서 관리
+*.pptx
