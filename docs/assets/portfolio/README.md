@@ -1,6 +1,8 @@
-# Selected original project materials
+# Historical application captures and project materials
 
-These are four English-annotated original application screenshots, a three-frame GIF and two original GeoSR logo assets, published for portfolio review with release permission. They are not synthetic UI mockups. Major UI labels and explanations are translated for portfolio readability over original capture pixels, retaining the original layout, branding and workflow. They are not untouched, pixel-exact copies, native-English runtime screenshots or screenshots of an English-localized product. The application interface and source remain Korean.
+These are four English-annotated original application screenshots, a three-frame GIF and two original GeoSR logo assets, published for portfolio review with release permission. They are not synthetic UI mockups. Major UI labels and explanations are translated for portfolio readability over original capture pixels, retaining the original layout, branding and workflow. They are not untouched, pixel-exact copies, native-English runtime screenshots or screenshots of an English-localized product. These legacy images are separate from the actual English frontend review captures now linked below. The main-branch application interface remains Korean; the English-localization review patch is supplied separately.
+
+See [new README excerpts and provenance](README_EXCERPTS.md) for actual English-runtime crops and selected archived report figures. The treatment below applies to the four historical UI captures and GIF described above, not to the separate report-chart excerpt.
 
 ## Data-protection treatment
 
