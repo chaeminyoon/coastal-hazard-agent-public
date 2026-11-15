@@ -5,19 +5,37 @@
   <img src="docs/assets/portfolio/geosr-logo.png" alt="GeoSR, original project context" width="200">
 </picture>
 
-**Portfolio source and English-annotated original captures for a geospatial analysis and evidence-linked reporting application.**
+**Portfolio source, actual English UI previews and selected original report figures for a geospatial analysis and evidence-linked reporting application.**
 
 I co-developed the system with an AI-team colleague, connecting map-based selection, scoped SQL, analysis, visualization, numerical checks and report preparation. The source assessment dataset was prepared separately; this work does not claim ownership of that dataset.
 
-![English-annotated original application workspace](docs/assets/portfolio/workspace.png)
+## Actual English frontend preview
 
-*English-annotated original GeoSR captures retain the original layout, branding and workflow, with account details protected. Major labels and explanations are translated for portfolio readability. These are not native-English runtime screenshots or evidence of an English-localized product; the application and source interface remain Korean. An edited internal review is included; raw assessment data is not.*
+![Actual English React interface, local read-only archive preview](docs/assets/portfolio/english-ui-excerpt.png)
+
+*An actual React-rendered English interface, cropped from the local localization review build, not English text painted onto a Korean screenshot. It is explicitly read-only: live dataset access, analysis submissions and new report generation are disabled.*
+
+The [English-localization source patch and review notes](docs/assets/portfolio/README_EXCERPTS.md#review-source-not-a-silent-main-branch-replacement) are provided separately. The patch is **not yet applied to the main-branch frontend**. The native-English preview, the Korean archived report and the historical English-annotated captures below are distinct evidence.
 
 ## Why this exists
 
 GIS selection, analysis tables, charts and report writing often live in separate tools. This application connects them while keeping executed queries and supporting results available for review.
 
-## Selected original project evidence
+## Original report: selected output excerpts
+
+![Heading excerpt from the original Korean coastal-hazard report](docs/assets/portfolio/report-cover-excerpt.png)
+
+**Archived output:** Busan Metropolitan City, Suyeong-gu, **14 July 2026**. The report is the original Korean document, not a recreated example or a newly generated English report.
+
+![Original neighbourhood-level high-risk grid-share chart, cropped from the archived report](docs/assets/portfolio/report-regional-chart-excerpt.png)
+
+*Selected aggregate comparison: the share of grade-4/5 high-risk grid cells by neighbourhood. The original labels, displayed values, geometry and colours are unchanged. The surrounding raw-data table and detailed grid map are not included. This is report-output evidence, not an accuracy benchmark or a current hazard advisory.*
+
+See [crop provenance, review-source scope and data boundaries](docs/assets/portfolio/README_EXCERPTS.md). The full PDF and underlying assessment records are not distributed.
+
+## Historical application evidence
+
+The following captures come from the original Korean application, with **English reading annotations and data-protection masks**. Unlike the native-English preview above, these are edited historical captures, not English-runtime screenshots.
 
 ### Executed SQL stays beside the result
 
@@ -39,6 +57,16 @@ All three frames of the original demo sequence are English-annotated and data-pr
 
 Explore [all English-annotated original captures and data-protection notes](docs/assets/portfolio/README.md), including selected-area analysis. Read the [edited internal engineering review](docs/ENGINEERING_REVIEW.md) for the rationale behind scope enforcement, cancellation/state integrity, queueing and chart semantics. The review distinguishes dated recommendations from mechanisms supported by the current source.
 
+
+<details>
+<summary>Actual English user-guide preview</summary>
+
+![Actual English guide dialog, with explicitly illustrative workflow schematics](docs/assets/portfolio/english-guide-excerpt.png)
+
+The dialog itself is rendered by the localized React frontend. Its diagrams describe a conceptual workflow and are not production screenshots or report data.
+
+</details>
+
 ## Engineering decisions
 
 - **Server-side selection scope:** selected grid IDs constrain subsequent queries rather than only changing the displayed map.
@@ -52,13 +80,14 @@ These are implementation/design features, not guarantees of universal factual ac
 ## What this public copy contains
 
 - Python/FastAPI web and service-integration code
-- React/TypeScript UI, including a Korean-language application interface
+- React/TypeScript main-branch UI (Korean), plus an unapplied English-localization review patch and two actual English-runtime crops
 - Deployment examples, schema migrations and automated tests
 - Four English-annotated original application screenshots and a three-frame demo, with sensitive/data-specific areas covered
+- Two selected report-image crops: the original cover heading and regional aggregate chart
 - Two original GeoSR logo assets and an edited historical internal engineering review
 - Separately labelled illustrative workflow schematics in the application guide
 
-Original media and internal documentation are **not excluded as a category**: the important portfolio materials are included after data-focused review. Raw assessment files, customer documents, unredacted result rows/maps, full generated report PDFs, deployment secrets and the original private Git history remain excluded. Captions distinguish English-annotated original captures from illustrative diagrams. Neither is a new benchmark or proof of current full-service reproducibility.
+Original media and internal documentation are **not excluded as a category**: the important portfolio materials are included after data-focused review. Raw assessment files, customer documents, unredacted result rows/maps, full generated report PDFs, deployment secrets and the original private Git history remain excluded. Captions distinguish actual English-runtime previews, original Korean report crops, English-annotated historical captures and illustrative diagrams. The selected report chart retains aggregate values, but underlying assessment records are not released. None is a new benchmark or proof of current full-service reproducibility.
 
 ## Important dependency boundary
 
@@ -93,4 +122,4 @@ See [validation details](docs/VALIDATION.md), [feature boundaries](docs/FEATURES
 
 ## Data, attribution and licensing
 
-This source is shared for portfolio review with release permission. Public visibility is not a general open-source license grant. Third-party dependencies and map services retain their own licenses and terms; see [third-party notes](THIRD_PARTY_NOTICES.md). Selected original logos and protected application captures are included with release permission. The underlying assessment data is not redistributed. Branding identifies the historical project context, not a new endorsement.
+This source is shared for portfolio review with release permission. Public visibility is not a general open-source license grant. Third-party dependencies and map services retain their own licenses and terms; see [third-party notes](THIRD_PARTY_NOTICES.md). Selected original logos, protected application captures and the reviewed report-image excerpts are included with release permission. The underlying assessment data is not redistributed. Branding identifies the historical project context, not a new endorsement.
